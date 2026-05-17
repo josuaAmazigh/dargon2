@@ -32,7 +32,11 @@ android {
     }
 
     defaultConfig {
-        minSdkVersion 16
+        // Bumped from 16 → 21 because the modern Android NDK (used to build
+        // libargon2-arm.so via CMakeLists.txt) refuses minSdk < 21 with
+        // CXX1110 ("undefined behavior"). Flutter itself requires minSdk
+        // >= 21 since Flutter 3.x, so this does not regress any real users.
+        minSdkVersion 21
     }
     lintOptions {
         disable 'InvalidPackage'

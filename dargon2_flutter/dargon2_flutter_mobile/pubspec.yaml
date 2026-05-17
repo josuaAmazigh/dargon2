@@ -32,7 +32,9 @@ flutter:
     implements: dargon2_flutter
     platforms:
       android:
+        package: com.tejasmehta.dargon2_flutter
         dartPluginClass: DArgon2Mobile
+        pluginClass: Dargon2FlutterPlugin
       ios:
         dartPluginClass: DArgon2Mobile
         pluginClass: Dargon2FlutterMobilePlugin
